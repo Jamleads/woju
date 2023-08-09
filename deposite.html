@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="h-screen w-full px-5">
+      <div class="top flex items-center justify-between bg-red-500 py-4">
+        <p class="text-lg">&larr;</p>
+        <p class="text-lg">Deposite USDT</p>
+        <div>
+          <i class="fa-solid fa-clipboard-question"></i>
+          <i class="fa-solid fa-file-circle-question ml-3"></i>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center justify-center mt-5">
+        <div
+          class="h-[150px] w-[50%] flex items-center justify-center bg-green-500"
+        >
+          QR CODE
+        </div>
+        <p class="text-center text-xs font-thin mt-5">
+          Send only USDT to this deposite adress.
+        </p>
+      </div>
+
+      <div class="bg-gray-200 px-4 py-3 mt-5 rounded-md">
+        <div class="wallet-address flex items-center justify-between">
+          <p class="">0x6t3efdc3456ygsw345678uhvd67654<br />4234rf</p>
+          <i class="fa-solid fa-copy"></i>
+        </div>
+        <p class="w-[75%] text-red-500 text-xs font-thin">
+          Please note that this deposite address supports C-chain deposite, For
+          Xchain deposits, please use the AVAX network
+        </p>
+
+        <div class="mt-2">
+          <span class="font-thin text-xs">Network</span>
+          <div class="flex items-center justify-between">
+            <p>AVAX C-Chain</p>
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+          </div>
+        </div>
+
+        <div class="mt-2">
+          <p class="font-thin text-xs">Selecte wallet</p>
+          <div class="">
+            <p>AVAX C-Chain</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/fc49c28ef9.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

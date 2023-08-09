@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="h-screen bg-[#000] w-full">
+      <div class="modal p-5 h-[8 rounded-md0%] bg-[#FFF] relative rounded-lg">
+        <div class="relative h-full w-full p-1">
+          <button
+            class="cancel w-[20px] h-[20px] bg-red-400 absolute top-0 right-0"
+          >
+            X
+          </button>
+
+          <h2 class="mt-5 font-bold">Choose Network</h2>
+          <div class="p-1 bg-red-100 flex rounded-md">
+            <div
+              class="w-[50px] h-[20px] flex items-center justify-center bg-yellow-100 rounded-full"
+            >
+              !
+            </div>
+
+            <p class="ml-2 text-xs text-yellow-100">
+              Please note that only supported networks on Binance platform are
+              shown, if you deposite via another network your assets may be
+              lost.
+            </p>
+          </div>
+
+          <div class="bg-gray-200 py-4 px-2 my-5 rounded-md">
+            <p>BNB Smart Chain (BEP20)</p>
+          </div>
+          <div class="bg-gray-200 py-4 px-2 my-5 rounded-md">
+            <p>ES0</p>
+          </div>
+          <div class="bg-gray-200 py-4 px-2 my-5 rounded-md">
+            <p>NEAR Protocol</p>
+          </div>
+          <div class="bg-gray-200 py-4 px-2 my-5 rounded-md">
+            <p>AVEX C-Chain</p>
+          </div>
+          <div class="bg-gray-200 py-4 px-2 my-5 rounded-md">
+            <p>Arbitrum One</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/fc49c28ef9.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
